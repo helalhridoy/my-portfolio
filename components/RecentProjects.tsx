@@ -5,7 +5,7 @@ import { FaLocationArrow } from "react-icons/fa";
 
 const RecentProjects = () => {
   return (
-    <div className="py-20">
+    <div className="py-20" id="projects">
       <h1 className="heading">
         A small selection of{" "}
         <span className="text-purple">recent projects</span>
@@ -14,14 +14,14 @@ const RecentProjects = () => {
         {projects.map(({ id, title, des, img, iconLists, link }) => (
           <div
             key={id}
-            className="  lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw] sm:w[570px]"
+            className=" sm:h-[41rem]  lg:min-h-[32.5rem] h-[32rem] flex items-center justify-center w-[80vw] sm:w-[570px]"
           >
             <PinContainer title={link} href={link}>
-              <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh]">
-                <div className="relative w-full h-full overflow-hidden lg:rounded-3xl bg-[#13162d]">
+              <div className="relative flex items-center justify-center sm:w-[570px] w-[80vw] overflow-hidden h-[30vh] sm:h-[40vh] mb-10">
+                <div className="relative flex flex-col justify-evenly w-full h-full overflow-hidden lg:rounded-3xl bg-[#13162d]">
+                  <img src={img} alt={title} />
                   <img src="/bg.png" alt="bg-img" />
                 </div>
-                <img src={img} alt={title} />
               </div>
               <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
                 {title}
